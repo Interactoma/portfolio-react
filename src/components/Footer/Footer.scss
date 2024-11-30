@@ -1,0 +1,107 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; // Add margin to the footer
+
+    &.light {
+        background-color: #fff;
+        color: #333;
+
+        .social-icons {
+            a {
+                color: #333;
+                background: linear-gradient(90deg, #8a2be2, #00bfff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                &:hover {
+                    color: #8a2be2;
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        margin: 10px 0;
+
+        a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #00bfff;
+            }
+        }
+
+        &.light a {
+            color: #333;
+
+            &:hover {
+                color: #8a2be2;
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+.cookie-modal {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.5s ease-in-out;
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #00bfff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #8a2be2;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+body {
+    padding-bottom: 80px; // Add padding to prevent content from overflowing under the footer
+}
