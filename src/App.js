@@ -9,7 +9,7 @@ import { useState, createContext, useEffect } from 'react';
 export const LanguageContext = createContext();
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false); // Default to light mode
   const [language, setLanguage] = useState('es');
 
   useEffect(() => {
